@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="csdlsach@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="csdlsach">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="demohibernate"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mobile"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="new_schema"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="phpmyadmin"/>
+    <schema id="10" parent="1" name="quanlybanhang"/>
+    <schema id="11" parent="1" name="test"/>
+    <table id="12" parent="2" name="address"/>
+    <table id="13" parent="2" name="dathang"/>
+    <table id="14" parent="2" name="employee"/>
+    <table id="15" parent="2" name="hoadon"/>
+    <table id="16" parent="2" name="khachhang"/>
+    <table id="17" parent="2" name="sach"/>
+    <table id="18" parent="2" name="user"/>
+    <column id="19" parent="12" name="Id_Addr">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="12" name="Country">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="21" parent="12" name="Street">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="22" parent="12" name="Id_Em">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="23" parent="12" name="address_employee_Id_Em_fk">
+      <ColNames>Id_Em</ColNames>
+    </index>
+    <key id="24" parent="12" name="PRIMARY">
+      <ColNames>Id_Addr</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="25" parent="12" name="address_employee_Id_Em_fk">
+      <ColNames>Id_Em</ColNames>
+      <RefSchemaName>csdlsach</RefSchemaName>
+      <RefTableName>employee</RefTableName>
+      <RefColNames>Id_Em</RefColNames>
+    </foreign-key>
+    <column id="26" parent="13" name="MaSach">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="13" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="13" name="MaHD">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="29" parent="13" name="MaSach_idx">
+      <ColNames>MaSach</ColNames>
+    </index>
+    <index id="30" parent="13" name="_idx">
+      <ColNames>MaHD</ColNames>
+    </index>
+    <key id="31" parent="13" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="32" parent="13" name="MaSach">
+      <ColNames>MaSach</ColNames>
+      <RefSchemaName>csdlsach</RefSchemaName>
+      <RefTableName>sach</RefTableName>
+      <RefColNames>MaSach</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="33" parent="13" name="MaKH">
+      <ColNames>MaHD</ColNames>
+      <RefSchemaName>csdlsach</RefSchemaName>
+      <RefTableName>hoadon</RefTableName>
+      <RefColNames>MaHD</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="34" parent="14" name="Name">
+      <Position>1</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="35" parent="14" name="Id_Em">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="14" name="Salary">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="37" parent="14" name="PRIMARY">
+      <ColNames>Id_Em</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="15" name="MaHD">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="39" parent="15" name="MaKH">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="15" name="TongTien">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="41" parent="15" name="MaKH_idx">
+      <ColNames>MaKH</ColNames>
+    </index>
+    <key id="42" parent="15" name="PRIMARY">
+      <ColNames>MaHD</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="16" name="MaKH">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="44" parent="16" name="TenKH">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="16" name="DiaChi">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="16" name="SoDT">
+      <Position>4</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="47" parent="16" name="PRIMARY">
+      <ColNames>MaKH</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="48" parent="17" name="MaSach">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="49" parent="17" name="TenSach">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="17" name="SoLuong">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="17" name="Gia">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="52" parent="17" name="PRIMARY">
+      <ColNames>MaSach</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="18" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="54" parent="18" name="User_Name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="18" name="Pass_Word">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="18" name="Role">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="57" parent="18" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

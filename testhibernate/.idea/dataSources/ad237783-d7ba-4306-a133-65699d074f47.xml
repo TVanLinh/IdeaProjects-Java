@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="mobile@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="mobile">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="phpmyadmin"/>
+    <schema id="7" parent="1" name="test"/>
+    <table id="8" parent="2" name="chitietdonhang2"/>
+    <table id="9" parent="2" name="khachhang2"/>
+    <table id="10" parent="2" name="sanpham2"/>
+    <table id="11" parent="2" name="sanphammoi"/>
+    <table id="12" parent="2" name="user2"/>
+    <column id="13" parent="8" name="makh">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="8" name="chitiet">
+      <Position>2</Position>
+      <DataType>varchar(6000)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="8" name="tongtien">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="9" name="makh">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="9" name="hoten">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="9" name="sodt">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="9" name="addr">
+      <Position>4</Position>
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="9" name="addrchitiet">
+      <Position>5</Position>
+      <DataType>varchar(350)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="9" name="phuongthucnhan">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="9" name="yeucau">
+      <Position>7</Position>
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="23" parent="9" name="PRIMARY">
+      <ColNames>makh</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="10" name="image">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="26" parent="10" name="chitiet">
+      <Position>3</Position>
+      <DataType>mediumtext|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="10" name="name">
+      <Position>4</Position>
+      <DataType>varchar(10000)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;SamSung Galaxy&apos;</DefaultExpression>
+    </column>
+    <column id="28" parent="10" name="gia">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;3000000&apos;</DefaultExpression>
+    </column>
+    <column id="29" parent="10" name="hang">
+      <Position>6</Position>
+      <DataType>varchar(1000)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;samsung&apos;</DefaultExpression>
+    </column>
+    <column id="30" parent="10" name="imagehover">
+      <Position>7</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="31" parent="10" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="33" parent="11" name="name">
+      <Position>2</Position>
+      <DataType>varchar(250)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&quot;&quot;&apos;</DefaultExpression>
+    </column>
+    <column id="34" parent="11" name="image">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&quot;&quot;&apos;</DefaultExpression>
+    </column>
+    <column id="35" parent="11" name="imagehover">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&quot;&quot;&apos;</DefaultExpression>
+    </column>
+    <column id="36" parent="11" name="gia">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="37" parent="11" name="hang">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="11" name="chitiet">
+      <Position>7</Position>
+      <DataType>varchar(10000)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&quot;&quot;&apos;</DefaultExpression>
+    </column>
+    <column id="39" parent="12" name="username">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="12" name="password">
+      <Position>2</Position>
+      <DataType>varchar(1000)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="41" parent="12" name="PRIMARY">
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
